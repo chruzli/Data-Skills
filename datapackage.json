@@ -1,0 +1,38 @@
+{
+  "profile": "tabular-data-package",
+  "resources": [
+    {
+      "name": "Tageszeitungen_packed",
+      "path": "Tageszeitungen_cleaned up.csv",
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {
+            "name": "Verbreitete Auflage 20min",
+            "type": "number",
+            "format": "default",
+            "title": "Verbreitete Auflage 20min CH-weit"
+          },
+          {
+            "name": "Leserschaft 20min",
+            "type": "number",
+            "format": "default",
+            "title": "Leserschaft 20min CH-weit"
+          },
+          {
+            "name": "Verbreitete Auflage LZ",
+            "type": "number",
+            "format": "default",
+            "title": "Verbreitete Auflage LZ CH-weit"
+          },
+          {
+            "name": "Leserschaft LZ",
+            "type": "number",
+            "format": "default",
+            "title": "Leserschaft LZ CH-weit"
+          }
+        ]
+      }
+    }
+  ]
+}
