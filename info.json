@@ -1,0 +1,67 @@
+{
+  "profile": "tabular-data-package",
+  "resources": [
+    {
+      "name": "Erhebung Ordnerstruktur",
+      "path": "Erhebung Ordnerstruktur refined.csv",
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {
+            "name": "Ordner",
+            "type": "string",
+            "format": "default",
+            "title": "Name Ordner"
+          },
+          {
+            "name": "Übergeordneter Ordner",
+            "type": "string",
+            "format": "default",
+            "title": "Name des übergeordneten Ordners"
+          },
+          {
+            "name": "Ordnerrang",
+            "type": "integer",
+            "format": "default",
+            "title": "Rang des jeweiligen Ordners (von 1 bis 3)"
+          },
+          {
+            "name": "Anzahl Unterordner",
+            "type": "integer",
+            "format": "default",
+            "title": "Anzahl der Unterordner"
+          }
+        ]
+      },
+      "title": "Erhebung Ordnerstruktur",
+      "format": "csv"
+    },
+    {
+      "name": "History",
+      "path": "history.json",
+      "profile": "tabular-data-resource",
+      "schema": {},
+      "title": "History OpenRefine",
+      "format": "json"
+    }
+  ],
+  "keywords": [
+    "Ordner "
+  ],
+  "name": "Erhebung Ordnerstruktur auf meinem Laptop",
+  "title": "Laptop Ordnerstruktur",
+  "description": "Dieses Datenset zeigt alle Ordner ersten bis dritten Ranges auf meinem Laptop. Die Daten sind ergänzt mit dem jeweiligen Überordner, dem Ordnerrang und der jeweiligen Anzahl Unterordner.",
+  "contributors": [
+    {
+      "title": "Salome Erni",
+      "role": "author"
+    }
+  ],
+  "licenses": [
+    {
+      "name": "CC-BY-NC-4.0",
+      "title": "Creative Commons Attribution-NonCommercial 4.0",
+      "path": "https://creativecommons.org/licenses/by-nc/4.0/"
+    }
+  ]
+}

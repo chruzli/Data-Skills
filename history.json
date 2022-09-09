@@ -1,0 +1,139 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Ordnerrang",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Ordnerrang using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Anzahl Unterordner",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Anzahl Unterordner using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Übergeordneter Ordner",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Übergeordneter Ordner using expression value.toString()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "﻿Ordner",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column ﻿Ordner using expression value.toString()"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "Ordnerrang",
+          "expression": "value",
+          "columnName": "Ordnerrang",
+          "from": 1.8599999999999999,
+          "to": 3.02,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Ordnerrang",
+    "expression": "cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "Überordner Ja Nein",
+    "columnInsertIndex": 3,
+    "description": "Create column Überordner Ja Nein at index 3 based on column Ordnerrang using expression cell.recon.match.id"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Überordner Ja Nein",
+    "description": "Remove column Überordner Ja Nein"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Übergeordneter Ordner",
+    "expression": "value.replace(\"Nomi\",\"Nomis\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Übergeordneter Ordner using expression value.replace(\"Nomi\",\"Nomis\")"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Übergeordneter Ordner",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "BA2_NOMI"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BA2_NOMIS"
+      }
+    ],
+    "description": "Mass edit cells in column Übergeordneter Ordner"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Übergeordneter Ordner",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "BA2_NOMIS",
+          "BA2_NOMI"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BA2_NOMIS"
+      }
+    ],
+    "description": "Mass edit cells in column Übergeordneter Ordner"
+  }
+]
